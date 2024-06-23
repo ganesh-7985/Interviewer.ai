@@ -17,6 +17,7 @@ import { MockInterview } from "@/utils/schema";
 import { v4 as uuidv4 } from 'uuid';
 import { useUser } from "@clerk/nextjs";
 import moment from "moment";
+import { useRouter } from "next/navigation";
 
 function NewInterview() {
     const [openDialog, setOpenDialog] = useState(false);
@@ -26,19 +27,18 @@ function NewInterview() {
     const [loading, setLoading] = useState(false);
     const [jsonResponse, setJsonResponse] = useState('');
     const { user, isLoaded } = useUser();
+    const router = useRouter();
 
     const onSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
 
-        const InputPrompt = `job position: ${jobPosition}, job description: ${jobDesc}, job experiences: ${jobExperience}, depending on above information give me ${process.env.QUESTION_COUNT} interview questions and answers in json format, give question and answer as fields in json`;
+        const InputPrompt = `job position: ${jobPosition}, job description: ${jobDesc}, job experiences: ${jobExperience}, depending on above information give me 5 interview questions and answers in json format, give question and answer as fields in json`;
 
         try {
             const result = await chatSession.sendMessage(InputPrompt);
-            const textResult = await result.response.text(); // Ensure the text is properly fetched
-            console.log("Text result: ", textResult); // Debugging: Log the raw text result
-            const MockInterviewResponse = textResult.replace('```json', '').replace('```', '').trim();
-            console.log("Parsed MockInterviewResponse: ", MockInterviewResponse); // Debugging: Log the parsed result
+            const textResult = result.response.text(); 
+            const MockInterviewResponse = textResult.replace('```json', '').replace('```', '');
             setJsonResponse(MockInterviewResponse);
 
             if (MockInterviewResponse && isLoaded && user?.primaryEmailAddress?.emailAddress) {
@@ -55,6 +55,7 @@ function NewInterview() {
                 console.log("Inserted ID: ", resp);
                 if (resp) {
                     setOpenDialog(false);
+                    router.push('/dashboard/interview/'+resp[0]?.mockId)
                 }
             } else {
                 console.error("User data is not loaded properly or MockInterviewResponse is empty.");

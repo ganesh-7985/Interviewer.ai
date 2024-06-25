@@ -1,4 +1,6 @@
 # Interviewera.ai
+ <img width="1470" alt="Screenshot 2024-06-25 at 4 22 26 PM" src="https://github.com/ganesh-7985/Interviewer.ai/assets/134718970/94c07454-8173-4cab-9f7e-f8d895fd6791">
+
 
 ## Description
 Interviewera.ai is an innovative tool designed to assist students and employees in preparing for their interviews. Job interviews can be a daunting experience, often leading to anxiety and stress. Interviewera.ai aims to alleviate these challenges by providing a comprehensive interview preparation platform. It helps users by generating tailored interview questions based on specific job roles, recording and analyzing their answers, offering constructive feedback, and providing suggestions on how to improve their responses. Additionally, the platform rates the user's performance, giving them a clear indication of their strengths and areas for improvement. By using Interviewera.ai, users can build confidence, improve their interview skills, and increase their chances of success.

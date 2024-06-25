@@ -1,37 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Interviewera.ai
 
-## Getting Started
+## Description
+Interviewera.ai is an innovative tool designed to assist students and employees in preparing for their interviews. Job interviews can be a daunting experience, often leading to anxiety and stress. Interviewera.ai aims to alleviate these challenges by providing a comprehensive interview preparation platform. It helps users by generating tailored interview questions based on specific job roles, recording and analyzing their answers, offering constructive feedback, and providing suggestions on how to improve their responses. Additionally, the platform rates the user's performance, giving them a clear indication of their strengths and areas for improvement. By using Interviewera.ai, users can build confidence, improve their interview skills, and increase their chances of success.
 
-First, run the development server:
+
+## Installation
+To set up and install the project, follow these steps:
 
 ```bash
+# Clone the repository
+https://github.com/ganesh-7985/Interviewer.ai
+
+# Navigate to the project directory
+cd Interviewera.ai
+
+# Install dependencies
+npm install
+
+# Run the application
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+## Usage
+To use Interviewera.ai, follow these instructions:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Run the application using the installation steps above.
+- Enter job information, including the job title, description, and any specific requirements.
+- The application will generate relevant interview questions based on the provided job information.
+- Record your answers to these questions using the application's recording feature.
+- Review the corrections and suggestions provided by the application to improve your answers.
+- Receive ratings on your performance to understand your strengths and identify areas for improvement.
+- Iterate on your answers using the feedback and improve your interview skills over time.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Features
+- Tailored Question Generation: Automatically creates interview questions based on the job information provided.
+- Answer Recording and Correction: Records user answers, analyzes them, and provides corrections.
+- Answer Suggestions: Offers suggestions on how to improve responses to interview questions.
+- Performance Rating: Rates user performance to help identify strengths and areas for improvement.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# Interviewer.ai
+Author:Shankar Ganesh
+Gmail:shankarganesh3005@gmail.com

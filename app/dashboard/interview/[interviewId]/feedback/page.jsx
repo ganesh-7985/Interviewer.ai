@@ -33,14 +33,13 @@ function Feedback({ params }) {
         <div className='flex flex-col items-center justify-center my-5'>
             <div className="p-10">
                 <h2 className="text-3xl font-bold text-green-500">Congratulations!</h2>
-                <h2 className="font-bold text-2xl">Here is your interview feedback</h2>
-                <h2 className="text-primary text-lg my-3">Your overall performance</h2>
+                <h2 className="font-bold text-primary text-2xl my-2">Here is your interview feedback</h2>
                 <h2 className="text-sm text-gray-500">Find below interview feedback details.</h2>
             </div>
             <div className="text-sm text-gray-500">
                 {feedbackList && feedbackList.map((item, index) => (
                     <Collapsible key={index} className='mt-5'>
-                        <CollapsibleTrigger className="p-2 bg-secondary rounded-lg flex justify-between my-2 text-left gap-7 w-full">
+                        <CollapsibleTrigger className="p-2 bg-slate-800 rounded-lg flex justify-between my-2 text-left gap-7 w-full">
                             {item.question} <ChevronsUpDown className="h-5 w-5" />
                         </CollapsibleTrigger>
                         <CollapsibleContent>
@@ -54,7 +53,7 @@ function Feedback({ params }) {
                     </Collapsible>
                 ))}
             </div>
-            <Link href="/dashboard">
+            <Link href="/dashboard" className='my-2'>
                 <Button>HOME</Button>
             </Link>
         </div>

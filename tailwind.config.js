@@ -18,39 +18,31 @@ module.exports = {
     },
     extend: {
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        primary: "hsl(217, 100%, 51%)",
+        "primary-content": "hsl(0, 0%, 100%)",
+        "primary-dark": "hsl(217, 100%, 41%)",
+        "primary-light": "hsl(217, 100%, 61%)",
+
+        secondary: "hsl(347, 100%, 51%)",
+        "secondary-content": "hsl(0, 0%, 100%)",
+        "secondary-dark": "hsl(347, 100%, 41%)",
+        "secondary-light": "hsl(347, 100%, 61%)",
+
+        background: "#010817",
+        foreground: "hsl(216, 13%, 15%)",
+        border: "hsl(218, 13%, 25%)",
+
+        copy: "hsl(240, 14%, 99%)",
+        "copy-light": "hsl(216, 13%, 85%)",
+        "copy-lighter": "hsl(218, 12%, 65%)",
+
+        success: "hsl(120, 100%, 51%)",
+        warning: "hsl(60, 100%, 51%)",
+        error: "hsl(0, 100%, 51%)",
+
+        "success-content": "hsl(120, 100%, 1%)",
+        "warning-content": "hsl(60, 100%, 1%)",
+        "error-content": "hsl(0, 0%, 100%)"
       },
       borderRadius: {
         lg: "var(--radius)",

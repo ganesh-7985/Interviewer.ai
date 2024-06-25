@@ -37,7 +37,7 @@ function NewInterview() {
 
         try {
             const result = await chatSession.sendMessage(InputPrompt);
-            const textResult = result.response.text(); 
+            const textResult = result.response.text();
             const MockInterviewResponse = textResult.replace('```json', '').replace('```', '');
             setJsonResponse(MockInterviewResponse);
 
@@ -55,7 +55,7 @@ function NewInterview() {
                 console.log("Inserted ID: ", resp);
                 if (resp) {
                     setOpenDialog(false);
-                    router.push('/dashboard/interview/'+resp[0]?.mockId)
+                    router.push('/dashboard/interview/' + resp[0]?.mockId)
                 }
             } else {
                 console.error("User data is not loaded properly or MockInterviewResponse is empty.");
@@ -69,7 +69,7 @@ function NewInterview() {
 
     return (
         <div>
-            <div className='p-10 border rounded-lg bg-secondary hover:scale-105 hover:shadow-md cursor-pointer transition-all'
+            <div className='p-10 border rounded-lg bg-slate-500 hover:scale-105 hover:shadow-md cursor-pointer transition-all'
                 onClick={() => setOpenDialog(true)}>
                 <h1 className='font-bold text-center text-lg'> + </h1>
                 <h2 className='font-bold text-center text-lg'>Add New</h2>
@@ -77,8 +77,8 @@ function NewInterview() {
             <Dialog open={openDialog} onOpenChange={setOpenDialog}>
                 <DialogContent className="max-w-xl">
                     <DialogHeader>
-                        <DialogTitle>Tell us more about your job</DialogTitle>
-                        <DialogDescription>
+                        <DialogTitle className='text-white'>Tell us more about your job</DialogTitle>
+                        <DialogDescription className='text-white'>
                             <form onSubmit={onSubmit}>
                                 Add details about the job Position, Description and job Experience.
                                 <div className="mt-6 my-4">
@@ -88,6 +88,7 @@ function NewInterview() {
                                         placeholder="Ex. AI Developer"
                                         value={jobPosition}
                                         onChange={(event) => setJobPosition(event.target.value)}
+
                                     />
                                 </div>
                                 <div className="mt-6 my-4">

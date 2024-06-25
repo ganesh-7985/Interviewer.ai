@@ -103,7 +103,7 @@ function RecordAnswers({ mockInterviewQuestions, activeQuestionIndex, interviewD
                     />
                 ) : (
                     <>
-                        <WebcamIcon className="h-72 w-full pt-5 bg-secondary rounded-lg border" />
+                        <WebcamIcon className="h-72 w-full pt-5 bg-slate-800 text-white rounded-lg border" />
                         <Button onClick={() => setWebCamEnabled(true)} className="my-4">Enable web camera</Button>
                     </>
                 )}
@@ -113,8 +113,8 @@ function RecordAnswers({ mockInterviewQuestions, activeQuestionIndex, interviewD
             </div>
             <div>
                 <Button disabled={loading} onClick={startStopRecording} variant="outline">
-                    <MicIcon />
-                    {isRecording ? <h2 className='text-red-500 animate-pulse flex gap-2 items-center'>Stop Recording..</h2> : <h2 className='text-primary flex gap-2 items-center'>Record Answer</h2>}
+                    <MicIcon className='text-white'/>
+                    {isRecording ? <h2 className='text-red-500 animate-pulse flex gap-2 items-center'>Stop Recording..</h2> : <h2 className='text-primary-light flex gap-2 items-center'>Record Answer</h2>}
                 </Button>
             </div>
         </div>
